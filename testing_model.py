@@ -12,7 +12,7 @@ lr=LogisticRegression()
 gb=xgboost.XGBRegressor
 le = preprocessing.LabelEncoder()
 
-df = pd.read_csv("E:/hardcode/delhi.csv")
+df = pd.read_csv(r"delhi.csv")
 '''
 df.loc[df['Status'] =="Ready_to_move" , 'Status'] = 1.0              #0:work in progress
 df.loc[df['Status'] =="Almost_ready" , 'Status'] = 0.0'''
@@ -23,7 +23,7 @@ df.Type.fillna('Apartment',inplace=True)
 df['Parking'].replace([39,114],2,inplace=True)
 df['Parking'].replace([5,9,10],4,inplace=True)
 
-'''
+"""
 plt.subplot(2,2,1)
 sns.countplot(df.Parking)
 plt.grid(True)
@@ -37,7 +37,8 @@ plt.subplot(2,2,4)
 sns.countplot(df.Transaction)
 plt.grid(True)
 plt.show()
-'''
+"""
+
 df.drop('Per_Sqft',axis=1,inplace=True)
 df.drop('Locality',axis=1,inplace=True)
 y=df[['Price']]
