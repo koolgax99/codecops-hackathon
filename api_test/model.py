@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 # Load the dataset in a dataframe object and include only four features as mentioned
-path = r"train.csv"
+path = r"/Users/satyamkumar/Desktop/machinelearning/codecops-hackathon/api_test/train.csv"
 df = pd.read_csv(path)
 include = ['Age', 'Sex', 'Embarked', 'Survived'] # Only four features
 df_ = df[include]

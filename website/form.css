@@ -37,7 +37,7 @@ header .overlay{
 
 h1 {
 	font-family: 'Dancing Script', cursive;
-	font-size: 80px;
+	font-size: 60px;
   margin-bottom: 2px;
   text-align: center;
 }
@@ -60,9 +60,8 @@ p {
 
 
 .robot .wrapper{
-  
   position: absolute;
-  top: 65%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;

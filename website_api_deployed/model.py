@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import pickle
 
-dataset = pd.read_csv('hiring.csv')
+dataset = pd.read_csv('/Users/satyamkumar/Desktop/machinelearning/codecops-hackathon/website_api_deployed/hiring.csv')
 
 dataset['experience'].fillna(0, inplace=True)
 
@@ -21,6 +21,7 @@ def convert_to_int(word):
 X['experience'] = X['experience'].apply(lambda x : convert_to_int(x))
 
 y = dataset.iloc[:, -1]
+print(dataset)
 
 #Splitting Training and Test Set
 #Since we have a very small dataset, we will train our model with all availabe data.
@@ -32,8 +33,8 @@ regressor = LinearRegression()
 regressor.fit(X, y)
 
 # Saving model to disk
-pickle.dump(regressor, open('model.pkl','wb'))
+pickle.dump(regressor, open('model1.pkl','wb'))
 
 # Loading model to compare the results
-model = pickle.load(open('model.pkl','rb'))
+model = pickle.load(open('model1.pkl','rb'))
 print(model.predict([[2, 9, 6]]))

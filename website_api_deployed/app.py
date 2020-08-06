@@ -1,13 +1,13 @@
 import numpy as np
 from flask import Flask, request, jsonify, render_template
-import pickle
+import joblib
 
 app = Flask(__name__)
-model = pickle.load(open('model.pkl', 'rb'))
+model = joblib.load(open('/Users/satyamkumar/Desktop/machinelearning/codecops-hackathon/website_api_deployed/model1.pkl', 'rb'))
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template(index.html')
 
 @app.route('/predict',methods=['POST'])
 def predict():
