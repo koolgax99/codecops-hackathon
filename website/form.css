@@ -5,18 +5,64 @@
   padding: 0;
   box-sizing: border-box;
   outline: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Open Sans",sans-serif;
 }
 
-body{
+html, body{
+  /* background: url('building.jpeg') no-repeat top center;
+  background-size: cover;
+  height: 100%; */
+  height: 100%;
+}
+header {
+  background: url('back.jpg');
+	text-align: center;
+	width: 100%;
+	height: auto;
+	background-size: cover;
+	background-attachment: fixed;
+	position: absolute;
+	overflow: hidden;
+	border-radius: 0 0 60% 60% / 0 0 40% 40%;
+}
+header .overlay{
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	color: rgb(238, 110, 51);
+	text-shadow: 1px 1px 1px #333;
+  background-image: linear-gradient( 75deg, #50d4e669 10%, #23d6b8f8 100%);
+	
+}
+
+h1 {
+	font-family: 'Dancing Script', cursive;
+	font-size: 80px;
+  margin-bottom: 2px;
+  text-align: center;
+}
+h2 {
+	font-family: sans-serif;
+	font-size: 40px;
+  margin-bottom: 2px;
+  
+}
+p {
+	font-family: 'Dancing Script', cursive;
+  font-size: 30px;
+  text-align: center;
+}
+.robot{
   background: url('building.jpeg') no-repeat top center;
   background-size: cover;
   height: 100vh;
 }
 
-.wrapper{
+
+.robot .wrapper{
+  
   position: absolute;
-  top: 50%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
@@ -27,27 +73,28 @@ body{
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-.wrapper .title h1{
+.robot .wrapper .title h1{
+  
   color: #c5ecfd;
   text-align: center;
   margin-bottom: 25px;
 }
 
-.contact-form{
+.robot .contact-form{
   display: flex;
 }
 
-.input-fields{
+.robot .input-fields{
   display: flex;
   flex-direction: column;
   margin-right: 4%;
 }
 
-.input-fields{
+.robot .input-fields{
   width: 48%;
 }
 
-.input-fields .input,
+.robot .input-fields .input,
  textarea{
   margin: 10px 0;
   background: transparent;
@@ -58,7 +105,7 @@ body{
   width: 100%;
 }
 
-.msg textarea{
+.robot .msg textarea{
   height: 212px;
 }
 
@@ -75,7 +122,7 @@ body{
   color: #c5ecfd;
 }
 
-.btn {
+/* .btn {
     background: #39b7dd;
     text-align: center;
     padding: 15px;
@@ -83,7 +130,91 @@ body{
     color: #fff;
     cursor: pointer;
     text-transform: uppercase;
+} */
+
+
+.btn{
+  padding: 18px 40px;
+  font-size: 16px;
+  color: #f1f1f1;
+  background: #fc5c65;
+  border: none;
+  font-weight: 700;
+  outline: none;
+  border-radius: 30px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: opacity .3s linear;
 }
+
+.btn:hover{
+  opacity: .7;
+}
+.footer {
+  background:linear-gradient( 75deg, #50d4e669 10%, #23d6b8f8 100%);
+  color: #303036;
+  height: 200px;
+  position: relative;
+}
+.footer .footer-content {
+  /* border: 1px solid red; */
+  /* height: 170px; */
+  display: flex;
+}
+.footer .footer-content .footer-section {
+  flex: 1;
+  /* border: 1px solid white; */
+}
+.footer .footer-content h2,
+.footer .footer-content h3 {
+  color: rgb(68, 46, 46);
+}
+.footer .footer-content .about h2 span {
+  color: #e6620a;
+}
+.footer .footer-content .social .socials a {
+  color: rgb(68, 46, 46);
+  border: 1px solid gray;
+  width: 45px;
+  height: 41px;
+  padding-top: 5px;
+  margin-right: 5px;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.3em;
+  border-radius: 5px;
+  transition: all .3s;
+}
+.footer .footer-content .social .socials a:hover {
+  border: 1px solid white;
+  color: orange;
+  transition: all .3s;
+}
+
+.footer .footer-bottom {
+  background: #645f5f;
+  color: whitesmoke;
+  height: 30px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding-top: 5px;
+}
+
+
+
+@media screen and (max-width:700px){
+  .btn{
+    margin: 0;
+    width: 100%;
+    margin-top: 20px;
+    }
+}
+
+
+
 
 @media screen and (max-width: 600px){
   .contact-form{
