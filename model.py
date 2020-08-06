@@ -10,6 +10,7 @@ from sklearn import preprocessing
 from sklearn.preprocessing import StandardScaler
 from matplotlib import pyplot as plt
 import seaborn as sns
+import pickle
 sc=StandardScaler()
 lr=LinearRegression()
 dtr=DecisionTreeRegressor()
@@ -101,12 +102,12 @@ years = int(input("mortgage loan term: "))
 rate = int(input("interest rate: "))
 principal = int(input("Down Payment: "))
 
-x = (budget*years*12) 
-y = x + principal
-z = y - ((y*rate*12)/100)
-new=[[float(z)]]
+a = (budget*years*12) 
+b = a + principal
+c = b - ((b*rate*12)/100)
+new=[[float(c)]]
 
-pred = dtr.predict(new)
+"""
 print("Expected Area :  ",pred[0][0])
 print("Expected BHK :  ",pred[0][1])
 print("Expected Bathroom :  ",pred[0][2])
@@ -117,3 +118,10 @@ print("Expected Transaction :  ",pred[0][5])
 print("Expected Type :  ",pred[0][6])
 print("\n")
 print("*NOTE:: more float values close to a whole number, more is the chances towards that whole value \n")
+"""
+
+# Saving model to disk
+pickle.dump(dtr, open('model.pkl','wb'))
+
+#lLoading model to compare the results
+model = pickle.load(open('model.pkl','rb'))
