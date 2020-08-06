@@ -59,9 +59,11 @@ form button.submit{
 	background: rgba(255,255,255,0.25);
 	border: 1px solid #333;
 	line-height: 1em;
-	padding: 0.5em 0.5em;
+	padding: 18px 40px;
+	border-radius: 30px;
 	-webkit-transition: all 0.25s;
-	transition: all 0.25s;
+	transition: opacity .3s linear;
+	
 }
 form button:hover,
 form button:focus,
@@ -70,6 +72,7 @@ form button.loading{
 	background: #333;
 	color: #fff;
 	outline: none;
+	opacity: .7;
 }
 form button.success{
 	background: #27ae60;

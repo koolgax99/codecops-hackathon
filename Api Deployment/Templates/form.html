@@ -15,34 +15,36 @@
       </h1>
     </header>
     <h1 class="text-center">Explore here !</h1>
-    <form class="registration-form">
-      <label class="col-one-half">
-        <span class="label-text">Name</span>
-        <input type="text" name="name">
-      </label>
-      <label class="col-one-half">
-        <span class="label-text">Phone</span>
-        <input type="number" name="phone">
-      </label>
-      <label>
-        <span class="label-text">Budget</span>
-        <input type="number" name="budget">
-      </label>
-      <label>
-        <span class="label-text">Expected years to repay)</span>
-        <input type="number" name="Years(expected to repay)">
-      </label>
-      <label>
-        <span class="label-text">Interest rate (expecting)</span>
-        <input type="number" name="Interest rate(expecting)">
-      </label>
-      <label>
-        <span class="label-text">Amount of down paymnet</span>
-        <input type="number" name="Amount of down paymnet">
-      </label>
-    
-      <div class="text-center">
-        <button class="submit" name="register" style="background-color: rgb(41, 43, 43);"><p style="color: white;">Predict</p></button>
+    <form action="{{ url_for('predict')}}"method="post">
+      <div class="registeration-form">
+        <label class="col-one-half">
+          <span class="label-text">Name</span>
+          <input type="text" name="name">
+        </label>
+        <label class="col-one-half">
+          <span class="label-text">Phone</span>
+          <input type="number" name="phone">
+        </label>
+        <label>
+          <span class="label-text">Budget</span>
+          <input type="number" name="budget">
+        </label>
+        <label>
+          <span class="label-text">Expected years to repay)</span>
+          <input type="number" name="Years(expected to repay)">
+        </label>
+        <label>
+          <span class="label-text">Interest rate (expecting)</span>
+          <input type="number" name="Interest rate(expecting)">
+        </label>
+        <label>
+          <span class="label-text">Amount of down paymnet</span>
+          <input type="number" name="Amount of down paymnet">
+        </label>
+      
+        <div class="text-center">
+          <button class="submit" name="register" style="background-color: rgb(41, 43, 43);"><p style="color: white;">Predict</p></button>
+        </div>
       </div>
     </form>
   </div>
