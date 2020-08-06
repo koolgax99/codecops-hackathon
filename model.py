@@ -96,7 +96,16 @@ x_test = sc.transform(x_test)
 '''
 
 dtr.fit(x,y)
-new=[[float(input("enter the price you are expecting   "))]]
+budget = int(input("Budget for house: "))
+years = int(input("mortgage loan term: "))
+rate = int(input("interest rate: "))
+principal = int(input("Down Payment: "))
+
+x = (budget*years*12) 
+y = x + principal
+z = y - ((y*rate*12)/100)
+new=[[float(z)]]
+
 pred = dtr.predict(new)
 print("Expected Area :  ",pred[0][0])
 print("Expected BHK :  ",pred[0][1])
