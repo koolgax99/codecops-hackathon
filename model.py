@@ -97,17 +97,19 @@ x_test = sc.transform(x_test)
 '''
 
 dtr.fit(x,y)
-budget = int(input("Budget for house: "))
-years = int(input("mortgage loan term: "))
-rate = int(input("interest rate: "))
-principal = int(input("Down Payment: "))
+#budget = int(input("Budget for house: "))
+#years = int(input("mortgage loan term: "))
+#rate = int(input("interest rate: "))
+#principal = int(input("Down Payment: "))
 
-a = (budget*years*12) 
-b = a + principal
-c = b - ((b*rate*12)/100)
-new=[[float(c)]]
+#a = (budget*years*12) 
+#b = a + principal
+#c = b - ((b*rate*12)/100)
+#new=[[float(c)]]
 
 """
+
+pred = dtr.predict(new)
 print("Expected Area :  ",pred[0][0])
 print("Expected BHK :  ",pred[0][1])
 print("Expected Bathroom :  ",pred[0][2])

@@ -23,18 +23,18 @@ def predict():
     final_features = [[np.asarray(c)]]
     prediction = model.predict(final_features)
 
-    output = round(prediction[0][0],2)
-    output1 = round(prediction[0][1],2)
-    """
-print("Expected Bathroom :  ",pred[0][2])
-print("Expected Furnishing :  ",pred[0][3])
-print("Expected Parking :  ",pred[0][4])
-print("Expected Status :  ",pred[0][5])
-print("Expected Transaction :  ",pred[0][5])
-print("Expected Type :  ",pred[0][6])
-""" 
+    area = round(prediction[0][0],2)
+    bhk = round(prediction[0][1],2)
+    bathroom = round(prediction[0][2],2)
+    furnishing= round(prediction[0][3],2)
+    parking = round(prediction[0][4],2)
+    status = round(prediction[0][5],2)
+    transaction = round(prediction[0][6],2)
+    typehouse = round(prediction[0][7],2)
 
-    return render_template('index.html', prediction_text='test status= {} bathroom= {} '.format(output, output1) )
+    return render_template('index.html', area='area = {} {} {} '.format(area,bhk,bathroom))
+    
+
 
 @app.route('/predict_api',methods=['POST'])
 def predict_api():
