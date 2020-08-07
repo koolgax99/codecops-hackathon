@@ -5,7 +5,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Responsive Contact us form Using HTML and CSS</title>
-  <link rel="stylesheet" href="form2.css">
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/form2.css') }}">
 </head>
 
 <body>
@@ -13,7 +17,7 @@
     <header>
       <h1>
         <a href="#">
-          <img src="logo.png" alt="Authentic Collection" style="width: 600px; filter: blur(0.5px);">
+          <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Authentic Collection" style="width: 600px; filter: blur(0.5px);">
         </a>
       </h1>
     </header>
@@ -23,19 +27,19 @@
 
         <label>
           <span class="label-text">Budget</span>
-          <input type="number" name="budget">
+          <input type="text" name="budget"  required="required">
         </label>
         <label>
           <span class="label-text">Expected years to repay)</span>
-          <input type="number" name="Years(expected to repay)">
+          <input type="text" name="Years(expected to repay)"  required="required">
         </label>
         <label>
           <span class="label-text">Interest rate (expecting)</span>
-          <input type="number" name="Interest rate(expecting)">
+          <input type="text" name="Interest rate(expecting)"  required="required">
         </label>
         <label>
           <span class="label-text">Amount of down paymnet</span>
-          <input type="number" name="Amount of down paymnet">
+          <input type="text" name="Amount of down paymnet"  required="required">
         </label>
 
         <div class="text-center">
