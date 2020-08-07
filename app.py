@@ -29,13 +29,31 @@ def predict():
     area = round(prediction[0][0],2)
     bhk = round(prediction[0][1],2)
     bathroom = round(prediction[0][2],2)
-    furnishing= round(prediction[0][3],2)
     parking = round(prediction[0][4],2)
-    status = round(prediction[0][5],2)
-    transaction = round(prediction[0][6],2)
-    typehouse = round(prediction[0][7],2)
+    
+    if(round(prediction[0][3],2)==1):
+        furnishing="Un-furnished"
+    elif (round(prediction[0][3],2)==2):
+        furnishing="Semi-Furnished"
+    else:
+        furnishing="Fully-Furnished"
 
-    return render_template('result.html', area='area = {}'.format(area) , bhk='bhk= {}'.format(bhk), bathroom='bathroom = {}'.format(bathroom),  furnishing='furnishing = {}'.format(furnishing), parking='parking = {}'.format(parking),  status='status = {}'.format(status), transaction='transaction = {}'.format(transaction),  typehouse='typehouse = {}'.format(typehouse))
+    if(round(prediction[0][5],2)==1):
+        status="Ready To Move"
+    else:
+        status="Almost Ready"
+
+    if(round(prediction[0][6],2)==1):
+        transaction="New Property"
+    else:
+        transaction="Resale"
+    
+    if(round(prediction[0][7],2)==1):
+        typehouse="Builder Floor"
+    else:
+        typehouse="Apartment"
+
+    return render_template('index.html', area='area = {}'.format(area) , bhk='bhk= {}'.format(bhk), bathroom='bathroom = {}'.format(bathroom),  furnishing='furnishing = {}'.format(furnishing), parking='parking = {}'.format(parking),  status='status = {}'.format(status), transaction='transaction = {}'.format(transaction),  typehouse='typehouse = {}'.format(typehouse))
 
 
 @app.route('/predict_api',methods=['POST'])
