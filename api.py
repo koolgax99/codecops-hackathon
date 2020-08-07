@@ -35,7 +35,7 @@ def predict():
     transaction = round(prediction[0][6],2)
     typehouse = round(prediction[0][7],2)
 
-    return render_template('index.html', area='area = {}'.format(area) , bhk='bhk= {}'.format(bhk), bathroom='bathroom = {}'.format(bathroom),  furnishing='furnishing = {}'.format(furnishing), parking='parking = {}'.format(parking),  status='status = {}'.format(status), transaction='transaction = {}'.format(transaction),  typehouse='typehouse = {}'.format(typehouse))
+    return render_template('result.html', area='area = {}'.format(area) , bhk='bhk= {}'.format(bhk), bathroom='bathroom = {}'.format(bathroom),  furnishing='furnishing = {}'.format(furnishing), parking='parking = {}'.format(parking),  status='status = {}'.format(status), transaction='transaction = {}'.format(transaction),  typehouse='typehouse = {}'.format(typehouse))
 
 
 @app.route('/predict_api',methods=['POST'])
