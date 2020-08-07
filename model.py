@@ -16,7 +16,7 @@ lr=LinearRegression()
 dtr=DecisionTreeRegressor()
 le = preprocessing.LabelEncoder()
 
-df = pd.read_csv("d_clean.csv")
+df = pd.read_csv(r"d_clean.csv")
 '''
 df.loc[df['Status'] =="Ready_to_move" , 'Status'] = 1.0              #0:work in progress
 df.loc[df['Status'] =="Almost_ready" , 'Status'] = 0.0'''
