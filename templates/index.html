@@ -44,15 +44,46 @@
         </label>
 
         <div class="text-center">
-          <button class="submit" name="register" style="background-color: rgb(41, 43, 43);">
+          <button onclick="myFunction()" class="submit" name="register" style="background-color: rgb(41, 43, 43);">
             <p style="color: white;">Predict</p>
           </button>
         </div>
       </div>
     </form>
 
+    <dialog id="myDialog" style="position: relative; left: 30%; width:40%; bottom: 30%; height: 55%; background-color: rgba(0, 0, 0, 0.767);">
+      <center><p style="color: white;">Here ! As per your preferences , We are showing the <br>area you can own in this price and possible<br>features that your asset may have<br>HAPPY INVESTING!</p> </center>
+      <p style="color: white; position: relative; left: 10%;" >
+      <br>
+      <br>
+      {{ area }}
+      <br>
+      {{bhk}}
+      <br>
+      {{bathroom}}
+      <br>
+      {{parking}}
+      <br>
+      {{furnishing}}
+      <br>
+      {{status}}
+      <br>
+      {{transaction}}
+      <br>
+      {{typehouse}}
+      </p>
+      <br>
+      <center><p style="color: white;">press ESC to exit</p></center>
+      
+    </dialog>
     
   </div>
+
+  <script>
+    function myFunction() { 
+      document.getElementById("myDialog").showModal(); 
+    } 
+  </script>
 
 
 </body>
