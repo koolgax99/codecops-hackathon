@@ -14,15 +14,12 @@ def predict():
     '''
     For rendering results on HTML GUI
     '''
-    rows_generator = request.form.values()
-    dict1 = next(rows_generator, None)
+    budget = int(request.form['budget'])
+    years = int(request.form['years'])
+    rate = int(request.form['rate'])
+    principal = int(request.form['principal'])
 
-    budget = int(dict1[0])
-    years = int(dict1[1])
-    rate = int(dict1[2])
-    principal=int(dict1[3])
-
-    a = (budget*years*12) 
+    a = (budget*years*12)
     b = a + principal
     c = b - ((b*rate*12)/100)
 
