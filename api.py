@@ -14,13 +14,19 @@ def predict():
     '''
     For rendering results on HTML GUI
     '''
-    int_features = [int(x) for x in request.form.values()]
+    rows_generator = request.form.values()
+    dict1 = next(rows_generator, None)
 
-    a = (int_features[0]*int_features[1]*12) 
-    b = a + int_features[2]
-    c = b - ((b*int_features[3]*12)/100)
+    budget = int(dict1[0])
+    years = int(dict1[1])
+    rate = int(dict1[2])
+    principal=int(dict1[3])
 
-    final_features = [[np.asarray(c)]]
+    a = (budget*years*12) 
+    b = a + principal
+    c = b - ((b*rate*12)/100)
+
+    final_features = [[np.array(c)]]
     prediction = model.predict(final_features)
 
     area = round(prediction[0][0],2)
@@ -32,8 +38,7 @@ def predict():
     transaction = round(prediction[0][6],2)
     typehouse = round(prediction[0][7],2)
 
-    return render_template('index.html', area='area = {} {} {} '.format(area,bhk,bathroom))
-    
+    return render_template('index.html', area='area = {}'.format(area) , bhk='bhk= {}'.format(bhk), bathroom='bathroom = {}'.format(bathroom),  furnishing='furnishing = {}'.format(furnishing), parking='parking = {}'.format(parking),  status='status = {}'.format(status), transaction='transaction = {}'.format(transaction),  typehouse='typehouse = {}'.format(typehouse))
 
 
 @app.route('/predict_api',methods=['POST'])
