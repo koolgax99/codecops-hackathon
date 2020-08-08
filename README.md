@@ -22,3 +22,13 @@
  
  ![property](https://img.etimg.com/thumb/msid-77163649,width-320,height-240/wealth/real-estate/buying-and-registering-property-will-soon-be-a-hassle-free-experience-heres-why.jpg)
  
+
+ ##### reach to our site: https://codecops-hackathon.herokuapp.com/predict
+ 
+ ##### here are the screenshots
+ 
+ 
+ 
+![Logo](/static/images/screen1.png)
+
+![Logo](/static/images/screen2.png)
