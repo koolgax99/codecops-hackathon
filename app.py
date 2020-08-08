@@ -21,9 +21,9 @@ def predict():
 
     a = (budget*years*12)
     b = a + principal
-    c = b - ((b*rate*12)/100)
+    total = b - ((b*rate*12)/100)
 
-    final_features = [[np.array(c)]]
+    final_features = [[np.array(total)]]
     prediction = model.predict(final_features)
 
     area = round(prediction[0][0],2)
@@ -53,7 +53,7 @@ def predict():
     else:
         typehouse="Apartment"
 
-    return render_template('index.html', area='area = {}'.format(area) , bhk='bhk= {}'.format(bhk), bathroom='bathroom = {}'.format(bathroom),  furnishing='furnishing = {}'.format(furnishing), parking='parking = {}'.format(parking),  status='status = {}'.format(status), transaction='transaction = {}'.format(transaction),  typehouse='typehouse = {}'.format(typehouse))
+    return render_template('index.html',principal='{}'.format(principal),total='{}'.format(total), area='Area = {}'.format(area) , bhk='BHK= {}'.format(bhk), bathroom='Bathroom = {}'.format(bathroom),  furnishing='Furnishing Status= {}'.format(furnishing), parking='Parking = {}'.format(parking),  status='House Status = {}'.format(status), transaction='Transaction of House = {}'.format(transaction),  typehouse='Type of House = {}'.format(typehouse))
 
 
 @app.route('/predict_api',methods=['POST'])
