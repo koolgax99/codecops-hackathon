@@ -9,4 +9,3 @@
  Here we came up with a close one. The product is going to be named as “Terra&Tech “ which can either be served in a preinstalled setup/website or can also be used as an independent system 
  
  
- (../master/static/images/logo.png)
