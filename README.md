@@ -20,4 +20,5 @@
  ##### All in All approach
  if successful , this product may make it easier for a common man to invest in property and assets as other investments, at the same time it can prove to be a boon to the number of people who are in search of their dream homes !
  
+ ![property](https://img.etimg.com/thumb/msid-77163649,width-320,height-240/wealth/real-estate/buying-and-registering-property-will-soon-be-a-hassle-free-experience-heres-why.jpg)
  
