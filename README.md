@@ -8,4 +8,11 @@
 ##### What is the solution then?
  Here we came up with a close one. The product is going to be named as “Terra&Tech “ which can either be served in a preinstalled setup/website or can also be used as an independent system 
  
+##### Whole concept behind the product
+ Program is built in python environment using python libraries and machine learning concepts. The dataset is cleeaned repeatedely so that it can be readily used by the python program to apply machine learning algorithms. After going through number of regression techniques , finally multiple linear regression algorithm fit close to the dataset. once we have finished the python program we designed API files for the same and took it to the web interface to be readily used in a new or existing systems.                                The program takes input of your budget and other financial conditions and then gives you the output of the most suitable assets you may own with other benefits.
+ 
+ 
+ ##### All in All approach
+ if successful , this product may make it easier for a common man to invest in property and assets as other investments, at the same time it can prove to be a boon to the number of people who are in search of their dream homes !
+ 
  
